@@ -1,0 +1,25 @@
+.container-input{
+    display: flex;
+    align-items: center;  
+    background: #fff;
+    color: #292727;
+    border: 2px solid #292727;
+    border-radius: 10px;
+    width: 90%;
+    margin-left: 15%;
+    input{  
+        flex: 1;      
+        background: transparent;
+        border: 0;
+        height: 56px;         
+        padding: 16px;  
+        color:#292727;      
+    }
+    & + input {
+        margin-top: 80px;
+      }
+    svg{
+        margin-left: 10px;
+    }
+
+}
