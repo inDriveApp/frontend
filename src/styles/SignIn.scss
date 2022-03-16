@@ -1,0 +1,53 @@
+.container{
+  
+    display: flex;
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        place-content: center;    
+        margin-left: 15%;
+
+        .button-container{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            width: 340px;
+            
+            margin-top: 24px;
+            margin-bottom: 24px; 
+            margin-left: 45%;
+            button{
+              margin-right: 22px;    
+              height: 56px;
+              width: 189px;
+              border: 0px;
+              border-radius: 10px;
+              font-weight: 500;
+              background: #FD640F;
+              color: #fff;
+        
+              
+              align-items: center;
+          
+              transition: filter 0.2s;
+              
+              img {
+                width : 28px;
+                height: 28px;
+                margin-right: 10px;
+                margin-left: 25px;
+              }
+          
+              &:hover {
+                filter: brightness(0.9);
+              }
+            }
+        }
+    }
+    
+    .background{
+        margin-left: auto;
+        width: 50%;
+    }
+}
