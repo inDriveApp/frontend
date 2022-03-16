@@ -6,22 +6,22 @@ import '../styles/SignIn.scss';
 export function SignIn() {
 
   return (
-    <div className="container">     
+    <div className="container">
 
-    <div className="content">
+      <div className="content">
         <img src={logoImg} alt="indrive" />
-        <h1>Faça seu login</h1>
-        <input type="email" placeholder='E-mail'/>
-        <input type="password"  placeholder='Senha' />
+        <aside>
+          <h1>Faça seu login</h1>
+          <button className="button-signin">
+            Entrar
+          </button>
+        </aside>
+      </div>
 
-        <div className='button-container'>
-            <button type='submit'>Entrar</button>
-      </div>
-      </div>
-      
-       <div className="background">
+      <div>
         <img src={signInBackground} alt="" />
       </div>
+
     </div>
   );
 }

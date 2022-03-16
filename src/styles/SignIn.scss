@@ -1,53 +1,108 @@
-.container{
-  
-    display: flex;
-    .content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        place-content: center;    
-        margin-left: 15%;
 
-        .button-container{
-            display: flex;
-            align-items: center;
-            flex-direction: row;
-            width: 340px;
-            
-            margin-top: 24px;
-            margin-bottom: 24px; 
-            margin-left: 45%;
-            button{
-              margin-right: 22px;    
-              height: 56px;
-              width: 189px;
-              border: 0px;
-              border-radius: 10px;
-              font-weight: 500;
-              background: #FD640F;
-              color: #fff;
+.container{
+  height: 100vh;
+
+  display: flex;
+  align-items: stretch;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    place-content: center;
+
+    width: 100%;
+    max-width: 700px;
+
+    margin-right: 50px;
+
+   > img {
+      width: 10%;
+      max-width: 300px;
+      margin-left: 40px;
+      margin-top: 10%;
+    }
+
+    aside {
+      margin: 40px 0;      
+      width: 340px;
+      text-align: center;
+      margin-left: 5px;
+
+      h1{
+        margin-left: 50px;
+        margin-bottom: 24px;
+      }
+
+      .button-signin {
+        margin-left: 15px;
+        height: 56px;
+        border: 0px;
+        border-radius: 10px;
+        font-weight: 500;
+        width: 100%;
+        background: #FD640F;
+        color: #fff;
+
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: filter 0.2s;
         
-              
-              align-items: center;
-          
-              transition: filter 0.2s;
-              
-              img {
-                width : 28px;
-                height: 28px;
-                margin-right: 10px;
-                margin-left: 25px;
-              }
-          
-              &:hover {
-                filter: brightness(0.9);
-              }
-            }
+        img {
+          width : 30px;
+          height: 30px;
+          margin-top: 0;
+          margin-right: 10px;
+          margin-left: 0px;
         }
+    
+        &:hover {
+          filter: brightness(0.9);
+        }
+      }
+
+      .join-facebook {
+        margin-left: 15px;
+        margin-top: 24px;
+        height: 56px;
+        border: 0px;
+        border-radius: 10px;
+        font-weight: 500;
+        width: 100%;
+        background: #475993;
+        color: #fff;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: filter 0.2s;
+        
+        img {
+          width : 30px;
+          height: 30px;
+          margin-top: 0;
+          margin-right: 10px;
+          margin-left: 25px;
+        }
+    
+        &:hover {
+          filter: brightness(0.9);
+        }
+      }
+    }
+
+  }
+
+  div {
+    flex: 1;
+    img {
+      height: 100vh;
+      width: 100%;
     }
     
-    .background{
-        margin-left: auto;
-        width: 50%;
-    }
+  }
 }
