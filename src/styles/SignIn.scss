@@ -45,6 +45,7 @@
         width: 80%;
         background: #FD640F;
         color: #fff;
+        margin-bottom: 10%;
 
 
         display: flex;
@@ -64,6 +65,14 @@
         &:hover {
           filter: brightness(0.9);
         }
+      }
+
+      a{
+        margin-left: 20%;
+        font-family: "Roboto Slab";
+        text-align: center;
+        text-decoration: none;
+        color: #FD640F;
       }
     }
 

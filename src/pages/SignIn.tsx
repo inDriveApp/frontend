@@ -65,6 +65,8 @@ export function SignIn() {
           <button className="button-signin" type='submit'>
             Entrar
           </button>
+          <a href="/register">
+          Crie uma conta</a>
         </form>
       </div>      
       <div>
