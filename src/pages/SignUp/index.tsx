@@ -22,6 +22,12 @@ interface SignUpFormData {
   login: string;
   password: string;
 }
+interface ErrorTypeAxios {
+  response?: Response;
+  message?: string;
+  error?: Error;
+}
+
 
 export default function SignUp(){
   const history = useHistory();
@@ -46,7 +52,8 @@ export default function SignUp(){
         await schema.validate(data, {
           abortEarly: false,
         });
-
+        
+        
         await api.post('api/user', data);
 
         addToast({
@@ -61,12 +68,13 @@ export default function SignUp(){
           const errors = getValidationsErrors(err);
           formRef.current?.setErrors(errors);
         }
-
+         
+        
         addToast({
           type: 'error',
           title: 'Erro no cadastro!',
           description:
-            'Ocorreu um erro ao enviar dados, por favor tente novamente.',
+            err.response.data.detail,
         });
       }
     },
