@@ -69,13 +69,22 @@ export default function SignUp(){
           formRef.current?.setErrors(errors);
         }
          
+        try {
+          addToast({
+            type: 'error',
+            title: 'Erro no cadastro!',
+            description:
+              err.response.data.detail,
+          });
+        } catch (error) {
+          addToast({
+            type: 'error',
+            title: 'Erro no cadastro!',
+            description:
+              'Ocorreu um erro ao enviar dados, por favor tente novamente.',
+          });
+        }
         
-        addToast({
-          type: 'error',
-          title: 'Erro no cadastro!',
-          description:
-            err.response.data.detail,
-        });
       }
     },
     [history, addToast],

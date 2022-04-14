@@ -48,11 +48,20 @@ export default function SignIn() {
           formRef.current?.setErrors(errors);
         }
 
-        addToast({
-          type: 'error',
-          title: 'Erro na autenticação!',
-          description: err.response.data.detail,
-        });
+        try {
+          addToast({
+            type: 'error',
+            title: 'Erro na autenticação!',
+            description: err.response.data.detail,
+          });
+        } catch (error) {
+          addToast({
+            type: 'error',
+            title: 'Erro na autenticação!',
+            description: 'Ocorreu um erro ao fazer login, cheque as credenciais.',
+          });
+        }
+        
       }
     },
     [history, signIn, addToast],
