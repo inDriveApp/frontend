@@ -9,7 +9,8 @@ import SignUp from '../pages/SignUp';
 import ForgotPassword from '../pages/ForgotPassword';
 import ResetPassword from '../pages/ResetPassword';
 
-import Dashboard from '../pages/Dashboard';
+import Files from '../pages/Files';
+import Shared from '../pages/Shared';
 
 export default function Routes(){
   return(
@@ -19,7 +20,8 @@ export default function Routes(){
     <Route path="/forgot-password" exact component={ForgotPassword} />
     <Route path="/reset-password" exact component={ResetPassword} />
 
-    <Route path="/dashboard" exact component={Dashboard} isPrivate />
+    <Route path="/files" exact component={Files} isPrivate />
+    <Route path="/shared" exact component={Shared} isPrivate />
   </Switch>
   );
 }

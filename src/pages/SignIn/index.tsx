@@ -41,7 +41,7 @@ export default function SignIn() {
         });
 
         await signIn({ ...data });
-        history.push('/dashboard');
+        history.push('/files');
       } catch (err) {
         if (err instanceof Yup.ValidationError) {
           const errors = getValidationsErrors(err);
