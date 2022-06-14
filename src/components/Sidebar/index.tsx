@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 
-import { Container, Content,Menu,Submenu,Icon,Title,UserBar,NameAvatar, Category,ButtonMore,Buttonlogout,Avatar} from './styles';
+import { Container,Profile,Menu,Submenu,Icon,Title,UserBar,NameAvatar, Category,Buttonlogout,Avatar} from './styles';
 
 import folderIcon from '../../assets/folder.svg';
 import sharedIcon from '../../assets/shared.svg';
@@ -40,8 +40,7 @@ export default function Sidebar() {
   }
 
   return (
-    <Container>
-      <Content>
+      <Container>
         <Menu>
           <Submenu isMenuActive={isSelectFile} onClick={selectMenuFile}>
             <Icon isMenuActive={isSelectFile} src={folderIcon}></Icon>
@@ -55,13 +54,13 @@ export default function Sidebar() {
           </Submenu>
         </Menu>
         <UserBar>
-          <NameAvatar>{name}</NameAvatar>
-          <Category>Administrador</Category>
-          <ButtonMore/>
-          <Buttonlogout onClick={signOut}/>
+          <Profile>
+            <NameAvatar>{name}</NameAvatar>
+            <Category>Administrador</Category>
+          </Profile>          
           <Avatar src={avatarImg}/>
-      </UserBar>
-      </Content>
-    </Container>
+          <Buttonlogout onClick={signOut}/>
+        </UserBar>
+      </Container>
   );
 }

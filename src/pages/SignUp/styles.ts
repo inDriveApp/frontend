@@ -27,6 +27,7 @@ export const Content = styled.div`
   place-content: center;
   width: 100%;
   max-width: 700px;
+  background: #292727;  
 `;
 
 export const AnimationContainer = styled.div`

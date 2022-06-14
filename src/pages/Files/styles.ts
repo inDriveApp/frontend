@@ -1,16 +1,49 @@
 import styled from 'styled-components';
+import { shade } from 'polished';
 
 
 export const Container = styled.div`
     display:flex;
-    top: 0;
-    left: 0;
-    background: #E5E5E5;
+    item-align:center;
+    background: #E5E5E5;   
+    widght: 100%; 
+    height: 100%;
 `;
+
+
+export const Upload = styled.div`
+  background: #ff9000;
+  height: 40px;
+  border:0;
+  border-radius: 10px;
+  border: 0;
+  padding: 0 16px;
+  color: #fff;
+  width: 140px;
+  font-weight: 500;
+  margin-top: 10rem;
+  margin-left: 78%;
+  transition: background-color 0.2s;
+  &:hover {
+    background: ${shade(0.2, '#ff9000')};
+  }
+
+  input{
+    display: none
+  }
+  p{
+    margin-left: 30px;
+    margin-top: 10px;
+  }
+  cursor:pointer;
+`;
+
+
 
 export const TableContainer = styled.section`
   margin-top: 30vh;
-  margin-left: 10vh;
+  margin-left: -61%;
+  height: 10%;
   table {
     width: 100%;
     border-spacing: 0 8px;
@@ -23,6 +56,9 @@ export const TableContainer = styled.section`
       line-height: 24px;
 
       
+    }
+    th:first-child {
+      margin-right: -200px;      
     }
     div{
         display: flex;
@@ -49,12 +85,30 @@ export const TableContainer = styled.section`
       &.title {
         color: #000000;
       }
+
+      img{
+        margin-right: -200px;
+      }
       
       &.income {
         color: #12a454;
       }
       &.outcome {
         color: #e83f5b;
+      }
+      &.popover {
+        display: inline-grid;
+        margin: 10px;
+        background: #DFDDE0;
+      }
+      
+      .popover h5 {
+        margin: 0px;
+        font-size: 1.3em;
+      }
+      
+      .popover p {
+        margin: 10px 0px;
       }
     }
     td:first-child {

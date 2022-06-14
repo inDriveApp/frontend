@@ -1,5 +1,4 @@
 import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
-import buttonMore from '../../assets/iconmore.svg';
 import buttonLogout from '../../assets/iconlogout.svg';
 
 interface MenuProps {
@@ -38,18 +37,13 @@ const isSelectIconMenu = css`
 
 
 export const Container = styled.div`
-    top: 0;
-    width: 350px;
-    height: 100vh;    
-`;
-export const Content = styled.div`
     position: absolute;
     top: 0;
     left: 0;
     border-radius: 10px;
-    background-color: #292727;
+    background: #292727;
     width: 320px;
-    height: 100vh;
+    height: 120%;
 `;
 
 export const Menu = styled.div`  
@@ -84,7 +78,7 @@ export const Icon = styled.img`
   `;
 
 export const Title = styled.span`
-  position: fixed;
+  position: absolute;
   font-family: 'Archivo Narrow';
   font-style: normal;
   font-weight: 400;
@@ -94,21 +88,24 @@ export const Title = styled.span`
 `;
 
 export const UserBar = styled.div`
-  position:absolute;
-  margin-left: auto;
+  display:flex;
   align-item: center;
   top: 20px;
-  left: 140vh;
-  width: 400px;
+  margin-left: 300%;
+  width: 380px;
   text-align: right;
   font-size: 24px;
   font-family: Heebo;
 `;
 
+export const Profile = styled.div`
+  display:grid;
+  align-item: center
+  padding: 10px;
+`;
+
 export const NameAvatar = styled.span`
-  position:absolute;  
-  top: 0;
-  left: 2.2rem;
+  margin-top:10%;
   font-family: 'Heebo';
   font-style: normal;
   font-weight: 500;
@@ -120,38 +117,25 @@ export const NameAvatar = styled.span`
 `;
 
 export const Category = styled.span`
-  position:absolute;
-  top: 26px;
-  left: 2.6rem;
   font-size: 14px;
   color: #FD640F;
 `;
 
-export const ButtonMore = styled.button`
-  position:absolute;
-  border: 0;
-  top: 19px;
-  left: 265px;
-  width: 24px;
-  height: 24px;
-  overflow: hidden;
-  background: url(${buttonMore});
-`;
 
 export const Buttonlogout = styled.button`
-  position:absolute;
   border: 0;
+  margin-left: 15%;
+  margin-top: 4%;
   top: 12px;
-  left: 342px;
+  left: 220px;
   width: 30px;
   height: 30px;
   background: url(${buttonLogout});
 `;
 
 export const Avatar = styled.img`
-  position:absolute;
-  top: 0;
-  left: 195px;
+  margin-left: 10%;
+  margin-top: 4%;
   width: 60px;
   height: 60px;
 `;

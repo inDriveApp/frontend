@@ -12,12 +12,14 @@ to {
   opacity: 1;
   transform: translateX(0);
 }
+
 `;
 
 export const Container = styled.div`
   height: 100vh;
   display: flex;
   align-items: stretch;
+ 
 `;
 
 export const Content = styled.div`
@@ -26,14 +28,15 @@ export const Content = styled.div`
   align-items: center;
   place-content: center;
   width: 100%;
-  max-width: 700px;
+  max-width: 700px;  
+  background: #292727;  
 `;
 
 export const AnimationContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: ${appearFromLeft} 1s;
+  animation: ${appearFromLeft} 1s;  
   img {
     width: 180px;
     height: 180px;
